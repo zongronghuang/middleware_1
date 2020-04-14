@@ -9,9 +9,7 @@ app.all('*', (req, res, next) => {
   const path = req.originalUrl
 
   // 避免顯示 favicon request
-  if (path === '/favicon.ico') {
-    return
-  } else {
+  if (path !== '/favicon.ico') {
     console.log(`${time} | ${method} from ${path}`)
     next('route')
   }
