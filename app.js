@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// 顯示所有
 app.all('*', (req, res, next) => {
   const now = new Date().toISOString()
   const time = now.substring(0, 10) + ' ' + now.substring(11, 19)
