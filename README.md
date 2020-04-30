@@ -7,6 +7,7 @@ Alpha Camp 學期三期末考迷你專案[<sup>1</sup>](#1)
 * **HTTP 方法**
 * **來源網址的相對路徑**
 
+![Demo](/Demo.png)
 
 ## 安裝專案及相依套件
 ---
@@ -21,6 +22,8 @@ git clone https://github.com/zongronghuang/middleware_1.git middleware_1
 3. 透過 console 安裝下列相依套件：
 ```
     npm install express 
+                express-handlebars
+                method-override
                 nodemon 
 ```
 
@@ -38,10 +41,7 @@ git clone https://github.com/zongronghuang/middleware_1.git middleware_1
 
 ## 功能
 ---
-1. 在瀏覽器網址列中輸入 app.js 內任一個路由：
-    * `http://localhost:3000`
-    * `http://localhost:3000/new`
-    * `http://localhost:3000/:id` (**:id** 可以為任何字串)
+1. 按一下介面上的按鍵來觸發路由。
 
 2. console 上會顯示路由資訊：
 ```
