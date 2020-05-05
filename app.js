@@ -9,9 +9,7 @@ app.set('view engine', 'handlebars')
 
 app.use(methodOverride('_method'))
 
-
-// 顯示所有路由 request 的資訊
-app.all('*', (req, res, next) => {
+app.use((req, res, next) => {
   const now = new Date().toISOString()
   const time = now.substring(0, 10) + ' ' + now.substring(11, 19)
   const method = req.method
@@ -23,6 +21,7 @@ app.all('*', (req, res, next) => {
     next('route')
   }
 })
+
 
 // 列出全部 Todo
 app.get('/', (req, res) => {
